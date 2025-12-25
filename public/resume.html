@@ -12,13 +12,18 @@
             --text-light: #64748b;
         }
 
+        @page {
+            margin: 0.5cm;
+            size: A4;
+        }
+
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: var(--text-dark);
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
             background: #f8fafc;
         }
 
@@ -27,109 +32,148 @@
                 background: white;
                 padding: 0;
                 max-width: 100%;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
             .no-print {
-                display: none;
+                display: none !important;
+            }
+
+            /* Enforce single page fit if possible */
+            h1 {
+                font-size: 24px !important;
+                margin-bottom: 5px !important;
+            }
+
+            h2 {
+                font-size: 14px !important;
+                margin-bottom: 8px !important;
+                margin-top: 15px !important;
+            }
+
+            p,
+            li {
+                font-size: 11px !important;
+            }
+
+            .dates {
+                font-size: 11px !important;
+            }
+
+            .section {
+                margin-bottom: 10px !important;
             }
         }
 
         .header {
             border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .name {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             color: #0f172a;
             margin: 0 0 5px 0;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .role {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--primary);
             font-weight: 600;
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-light);
         }
 
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .section-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             text-transform: uppercase;
             color: var(--primary);
             border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
         }
 
         .experience-item {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            page-break-inside: avoid;
         }
 
         .company-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
 
         .company-name {
             font-weight: 700;
-            font-size: 16px;
+            font-size: 14px;
+            color: #1e293b;
         }
 
         .job-title {
             font-weight: 600;
+            font-size: 13px;
             color: #334155;
+            margin-bottom: 2px;
         }
 
         .dates {
-            font-size: 14px;
+            font-size: 12px;
             color: var(--text-light);
             font-style: italic;
         }
 
         ul {
-            margin: 5px 0;
-            padding-left: 20px;
+            margin: 2px 0;
+            padding-left: 18px;
         }
 
         li {
-            margin-bottom: 5px;
-            font-size: 14px;
+            margin-bottom: 3px;
+            font-size: 13px;
+            text-align: justify;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 30px;
         }
 
         .skill-category {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
+            color: #334155;
         }
 
         .skill-list {
-            font-size: 14px;
-            color: #334155;
+            font-size: 12px;
+            color: #475569;
+        }
+
+        /* Summary text */
+        p.summary {
+            font-size: 13px;
+            text-align: justify;
         }
 
         .download-btn {
@@ -144,6 +188,9 @@
             font-weight: 600;
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
             transition: all 0.3s;
+            z-index: 1000;
+            cursor: pointer;
+            border: none;
         }
 
         .download-btn:hover {
@@ -156,22 +203,46 @@
 <body>
     <header class="header">
         <h1 class="name">Rajesh R</h1>
-        <p class="role">Backend Engineer | Java | Microservices | Cloud-Native Systems</p>
-        <div class="contact-info">
-            <span>📧 rajesh.r072000@gmail.com</span>
-            <span> Chennai, India</span>
-            <span>🔗 linkedin.com/in/rajesh-r-26070327a</span>
+        <div class="company-header" style="margin-bottom: 5px;">
+            <span class="role" style="margin:0;">Backend Engineer | Java | Microservices</span>
+            <div class="contact-info" style="gap:10px;">
+                <span>📧 rajesh.r072000@gmail.com</span>
+                <span>📍 Chennai, India</span>
+                <a href="https://linkedin.com/in/rajesh-r-26070327a" style="color: inherit; text-decoration: none;">🔗
+                    LinkedIn</a>
+            </div>
         </div>
     </header>
 
     <div class="section">
         <h2 class="section-title">Professional Summary</h2>
-        <p style="font-size: 14px;">Backend Engineer specializing in designing and operating scalable, low-latency
+        <p class="summary">Backend Engineer specializing in designing and operating scalable, low-latency
             backend systems using Java 17 and Spring Boot. Strong expertise in microservices architecture, RESTful API
-            design, distributed systems, and secure backend development. Proven impact in modernizing legacy systems,
-            improving API performance by 25%, optimizing database throughput by 35%, and maintaining 99.9% service
-            availability in production environments. Passionate about clean code, system reliability, and continuous
-            improvement within Agile teams.</p>
+            design, and distributed systems. Proven impact in modernizing legacy systems,
+            improving API performance by 25%, and maintaining 99.9% service
+            availability in production.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-category">Programming & Languages</div>
+                <div class="skill-list">Java (8, 11, 17), SQL, PostgreSQL, MySQL</div>
+            </div>
+            <div>
+                <div class="skill-category">Backend Frameworks</div>
+                <div class="skill-list">Spring Boot 3.x, Spring Cloud, Hibernate, Spring Security</div>
+            </div>
+            <div>
+                <div class="skill-category">Microservices & Architecture</div>
+                <div class="skill-list">RESTful APIs, Resilience4j, Rate Limiting, Event-Driven</div>
+            </div>
+            <div>
+                <div class="skill-category">Cloud & DevOps Tools</div>
+                <div class="skill-list">AWS (EC2, S3), Docker, Redis, Flyway, Git, Maven, CI/CD</div>
+            </div>
+        </div>
     </div>
 
     <div class="section">
@@ -179,65 +250,43 @@
         <div class="experience-item">
             <div class="company-header">
                 <div>
-                    <span class="company-name">KritiLabs Technologies</span> — Chennai
+                    <span class="company-name">KritiLabs Technologies</span>
+                    <span style="font-size:12px; color:#64748b;">— Chennai</span>
                 </div>
                 <span class="dates">Feb 2023 – Present</span>
             </div>
             <div class="job-title">Java Backend Developer</div>
             <ul>
-                <li>Architected, developed, and maintained high-performance Spring Boot microservices, migrating legacy
-                    monolithic components into cloud-native services for enterprise applications.</li>
-                <li>Designed and optimized RESTful APIs, reducing average response times by 25% and improving data
-                    throughput by 35% through efficient DTO mapping, query tuning, and caching strategies.</li>
+                <li>Architected and maintained high-performance Spring Boot microservices, migrating legacy monolithic
+                    components into cloud-native services.</li>
+                <li>Designed optimized RESTful APIs, reducing average response times by 25% and improving data
+                    throughput by 35% through query tuning and caching.</li>
                 <li>Implemented rate limiting, circuit breaker, retry, and bulkhead patterns using Resilience4j to
-                    protect services from overload and downstream failures, achieving 99.9% availability during peak
-                    traffic.</li>
+                    protect services, achieving 99.9% availability during peak traffic.</li>
                 <li>Secured distributed services using Spring Security and JWT, enforcing Role-Based Access Control
-                    (RBAC) across multiple modules and APIs.</li>
+                    (RBAC) across multiple modules.</li>
                 <li>Integrated Flyway for automated database migrations, enabling zero-downtime production deployments
-                    and consistent schema versioning across environments.</li>
-                <li>Improved database performance by implementing indexing strategies, optimizing transaction
-                    boundaries, and resolving N+1 query issues using Spring Data JPA and Hibernate.</li>
-                <li>Actively monitored production systems using observability tools, performing Root Cause Analysis
-                    (RCA) for critical incidents and performance bottlenecks.</li>
-                <li>Collaborated in Agile/Scrum teams, conducted code reviews, and mentored junior developers, ensuring
-                    adherence to SOLID principles, clean architecture, and maintainable codebases.</li>
+                    and consistent schema versioning.</li>
+                <li>Resolved N+1 query issues and optimized transaction boundaries using Spring Data JPA and Hibernate
+                    for improved DB performance.</li>
+                <li>Monitored production systems using observability tools, performing Root Cause Analysis (RCA) to
+                    resolve critical bottlenecks.</li>
+                <li>Mentored junior developers and conducted code reviews, ensuring adherence to SOLID principles and
+                    clean architecture.</li>
             </ul>
         </div>
     </div>
 
-    <div class="section">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div>
-                <div class="skill-category">Programming & Databases</div>
-                <div class="skill-list">Java (8, 11, 17), SQL, PostgreSQL, MySQL, Hibernate, Query Optimization</div>
-            </div>
-            <div>
-                <div class="skill-category">Backend Frameworks</div>
-                <div class="skill-list">Spring Boot 3.x, Spring Framework, Spring Data JPA, Spring Security</div>
-            </div>
-            <div>
-                <div class="skill-category">Microservices</div>
-                <div class="skill-list">RESTful API, Event-Driven, Resilience4j, Rate Limiting, API Gateway</div>
-            </div>
-            <div>
-                <div class="skill-category">Cloud & DevOps</div>
-                <div class="skill-list">AWS (EC2, S3), Docker, Redis, Flyway, CI/CD, Maven, Git</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
+    <div class="section" style="margin-bottom: 15px;">
         <h2 class="section-title">Education</h2>
-        <div class="experience-item">
+        <div class="experience-item" style="margin-bottom: 8px;">
             <div class="company-header">
                 <span class="company-name">Master of Computer Applications (MCA)</span>
                 <span class="dates">2020 – 2022</span>
             </div>
             <div class="dates">Jaya Engineering College, Anna University</div>
         </div>
-        <div class="experience-item">
+        <div class="experience-item" style="margin-bottom: 0;">
             <div class="company-header">
                 <span class="company-name">Bachelor of Computer Applications (BCA)</span>
                 <span class="dates">2017 – 2020</span>
@@ -247,16 +296,16 @@
     </div>
 
     <div class="section">
-        <h2 class="section-title">Certifications & Achievements</h2>
-        <ul>
-            <li><b>Java Spring Framework 6 with Spring Boot 3</b> — Udemy (Feb 2025)</li>
-            <li><b>Building Microservices with Spring Boot & Spring Cloud</b> — Udemy (May 2024)</li>
-            <li>Awarded multiple official certificates for successful project deliveries.</li>
-            <li>Honored for cross-project contributions and reliable delivery in production environments.</li>
+        <h2 class="section-title">Certifications</h2>
+        <ul style="margin-top:0;">
+            <li><b>Java Spring Framework 6 with Spring Boot 3</b> — Udemy (2025)</li>
+            <li><b>Building Microservices with Spring Boot & Spring Cloud</b> — Udemy (2024)</li>
+            <li>Awarded multiple official certificates for successful project deliveries and reliable production
+                support.</li>
         </ul>
     </div>
 
-    <a href="javascript:window.print()" class="download-btn no-print">🖨️ Print / Save as PDF</a>
+    <button onclick="window.print()" class="download-btn no-print">🖨️ Download PDF</button>
 </body>
 
 </html>

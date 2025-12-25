@@ -1,9 +1,12 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
+import About from './components/About';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Architecture from './components/Architecture';
-import Skills from './components/Skills';
+import Experience from './components/Experience';
+import ProblemSolving from './components/ProblemSolving';
+import Achievements from './components/Achievements';
 import Qualifications from './components/Qualifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -16,10 +19,13 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Experience />
+        <About />
+        <Skills />
         <Projects />
         <Architecture />
-        <Skills />
+        <Experience />
+        <ProblemSolving />
+        <Achievements />
         <Qualifications />
         <Contact />
       </main>

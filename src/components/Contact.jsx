@@ -22,6 +22,7 @@ const Contact = () => {
                                 <Mail className="info-icon" size={20} />
                                 <span>rajesh.r072000@gmail.com</span>
                             </a>
+
                             <div className="info-item">
                                 <MapPin className="info-icon" size={20} />
                                 <span>Chennai, India</span>

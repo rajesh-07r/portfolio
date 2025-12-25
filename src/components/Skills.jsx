@@ -2,20 +2,20 @@ import { motion } from 'framer-motion';
 
 const skills = [
     {
-        category: "Languages & Databases",
-        items: ["Java 8/11/17", "SQL", "PostgreSQL", "MySQL", "Query Optimization", "Hibernate", "Deadlock Handling"]
+        category: "Programming & Databases",
+        items: ["Java (8, 11, 17)", "SQL", "PostgreSQL", "MySQL", "Query Optimization", "Indexing strategy", "Transaction Management"]
     },
     {
-        category: "Frameworks & Security",
-        items: ["Spring Boot 3.x", "Spring Framework", "Spring Data JPA", "Spring Security", "JWT", "RBAC"]
+        category: "Backend Frameworks",
+        items: ["Spring Boot 3.x", "Spring Framework", "Spring Data JPA", "Hibernate", "Spring Security", "RBAC", "JWT"]
     },
     {
-        category: "Microservices & Architecture",
-        items: ["RESTful API", "Microservices", "Resilience4j", "API Gateway", "Rate Limiting", "Event-Driven"]
+        category: "Microservices & Distributed Systems",
+        items: ["RESTful API Design", "Microservices", "Event-Driven", "Resilience4j", "Rate Limiting", "Circuit Breaker", "Idempotent APIs"]
     },
     {
-        category: "Cloud, DevOps & Tools",
-        items: ["AWS (EC2, S3)", "Docker", "Redis", "Flyway", "Maven", "JIRA", "Git", "Postman"]
+        category: "Cloud & DevOps",
+        items: ["AWS (EC2, S3)", "Docker", "Redis (Caching)", "Flyway", "CI/CD", "Maven", "Git", "Postman", "Observability"]
     }
 ];
 
