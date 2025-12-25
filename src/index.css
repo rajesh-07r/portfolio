@@ -14,14 +14,21 @@
   --accent-secondary: #9333ea;
   /* Purple-600 */
 
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  /* Increased contrast from 0.05 */
-  --card-hover: rgba(0, 0, 0, 0.04);
-  /* Increased contrast for hover */
-  --nav-bg: rgba(255, 255, 255, 0.8);
+  /* Improved Card Design for Light Mode */
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  /* Nearly opaque for better separation */
+  --glass-border: rgba(226, 232, 240, 0.8);
+  /* Slate-200, crisp border */
+  --card-hover: rgba(241, 245, 249, 1);
+  /* Slate-100 solid for hover */
+  --nav-bg: rgba(255, 255, 255, 0.9);
 
-  font-family: 'Outfit', sans-serif;
+  /* Additional shadow for light mode cards */
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  font-family: 'Outfit',
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

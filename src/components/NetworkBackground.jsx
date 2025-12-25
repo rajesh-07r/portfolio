@@ -93,7 +93,7 @@ const NetworkBackground = () => {
         <canvas
             ref={canvasRef}
             className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"
-            style={{ opacity: 0.6 }} // Subtle background
+            style={{ opacity: 0.3 }} // Subtle background
         />
     );
 };
