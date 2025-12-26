@@ -429,11 +429,6 @@ img {
   color: var(--text-secondary);
   font-size: 0.875rem;
   margin-bottom: 1rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  /* Fixed for modern layout */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .project-tags {

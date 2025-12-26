@@ -27,7 +27,7 @@ const Qualifications = () => {
                         <div className="relative pl-8 border-l-2 border-indigo-500/20 space-y-10 py-2">
                             {/* MCA */}
                             <div className="relative">
-                                <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-[var(--bg-color)] box-content shadow-[0_0_15px_rgba(99,102,241,0.5)]" />
+                                <span className="absolute -left-[41px] top-2 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-[var(--bg-color)] box-content shadow-[0_0_15px_rgba(99,102,241,0.5)]" />
                                 <h4 className="text-xl font-bold mb-1" style={{ color: 'var(--text-primary)' }}>Master of Computer Applications (MCA)</h4>
                                 <p className="text-lg font-medium mb-1" style={{ color: 'var(--accent-primary)' }}>Jaya Engineering College, Anna University</p>
                                 <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-[var(--glass-border)] text-[var(--text-secondary)]">
@@ -37,7 +37,7 @@ const Qualifications = () => {
 
                             {/* BCA */}
                             <div className="relative">
-                                <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-[var(--bg-color)] box-content opacit-75" />
+                                <span className="absolute -left-[41px] top-2 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-[var(--bg-color)] box-content opacity-75" />
                                 <h4 className="text-xl font-bold mb-1" style={{ color: 'var(--text-primary)' }}>Bachelor of Computer Applications (BCA)</h4>
                                 <p className="text-lg font-medium mb-1" style={{ color: 'var(--accent-primary)' }}>Jaya College of Arts and Science</p>
                                 <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-[var(--glass-border)] text-[var(--text-secondary)]">
@@ -57,7 +57,7 @@ const Qualifications = () => {
                         <div className="relative pl-8 border-l-2 border-purple-500/20 space-y-10 py-2">
                             {/* Cert 1 */}
                             <div className="relative group">
-                                <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-[var(--bg-color)] box-content shadow-[0_0_15px_rgba(168,85,247,0.5)]" />
+                                <span className="absolute -left-[41px] top-2 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-[var(--bg-color)] box-content shadow-[0_0_15px_rgba(168,85,247,0.5)]" />
                                 <h4 className="text-xl font-bold mb-1 group-hover:text-purple-500 transition-colors" style={{ color: 'var(--text-primary)' }}>
                                     Java Spring Framework 6 with Spring Boot 3
                                 </h4>
@@ -71,7 +71,7 @@ const Qualifications = () => {
 
                             {/* Cert 2 */}
                             <div className="relative group">
-                                <span className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-[var(--bg-color)] box-content" />
+                                <span className="absolute -left-[41px] top-2 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-[var(--bg-color)] box-content" />
                                 <h4 className="text-xl font-bold mb-1 group-hover:text-purple-500 transition-colors" style={{ color: 'var(--text-primary)' }}>
                                     Building Microservices with Spring Boot
                                 </h4>
